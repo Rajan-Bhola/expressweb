@@ -49,7 +49,6 @@ app.get('/weather',(req,resp) => {
                     location : 'City Not Found',
                 });
             }
-            //resp.write(arrData[0].name);
         })
         .on('end',(err) =>{
             if(err) return console.log('conn closed');
