@@ -1,0 +1,69 @@
+
+{{>header}}
+ 
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Weather!</h2>
+                        <hr class="divider">
+                        <p class="text-muted mb-5">Check your weather here!</p>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="temp_form" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="city" id="city" type="text" placeholder="Enter your name..." data-sb-validations="required" data-sb-can-submit="no" value="{{city}}">
+                                <label for="name">Enter City</label>
+                            </div>
+                           <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Search</button></div>
+                        </form>
+                        <br>
+                        <div class="tempinfo">
+                            <div class="main_layer">
+                               <div class="box">
+                                <div class="wave -one"></div>
+                                <div class="wave -two"></div>
+                                <div class="wave -three"></div>
+
+                                <div id="weathercon">
+                                    <i class="fas fa-sun" style="color: #eccc68"></i>
+                                </div>
+
+                                <div class="info">
+                                    <h2 class="location">
+                                    <i class="fas fa-street-view" style="color: #fff"></i
+                                    >{{location}},{{country}}
+                                    </h2>
+                                    <p id="date">WED | nov 23 | 10:49AM</p>
+                                    <h1 class="temp">{{tempval}}&deg;C</h1>
+                                    <h3 class="tempmin_max">
+                                    Min {{tempmin}}&deg;C | Max {{tempmax}}&deg;C
+                                    </h3>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section><!-- End About Section -->
+
+
+  </main><!-- End #main -->
+{{>footer}}
